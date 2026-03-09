@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blood Donation Management System</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+💉 Blood Donation & Request Management System
+</header>
+
+<nav>
+
+<button onclick="showSection('donor')">Register Donor</button>
+<button onclick="showSection('request')">Request Blood</button>
+<button onclick="showSection('search')">Search Donor</button>
+<button onclick="showSection('dashboard')">View Records</button>
+
+</nav>
+
+<div class="container">
+
+<div class="box section" id="donor">
+
+<h2>🩸 Donor Registration</h2>
+
+<input type="text" id="dname" placeholder="Full Name">
+
+<select id="dblood">
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>O+</option>
+<option>O-</option>
+<option>AB+</option>
+<option>AB-</option>
+</select>
+
+<input type="text" id="dphone" placeholder="Phone Number">
+<input type="text" id="dcity" placeholder="City">
+
+<button class="submit" onclick="addDonor()">Register Donor</button>
+
+</div>
+
+
+<div class="box section" id="request">
+
+<h2>🏥 Blood Request</h2>
+
+<input type="text" id="pname" placeholder="Patient Name">
+
+<select id="pblood">
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>O+</option>
+<option>O-</option>
+<option>AB+</option>
+<option>AB-</option>
+</select>
+
+<input type="number" id="units" placeholder="Units Required">
+
+<input type="text" id="pphone" placeholder="Phone Number">
+<input type="text" id="hospital" placeholder="Hospital Name">
+
+<button class="submit" onclick="addRequest()">Submit Request</button>
+
+</div>
+
+
+<div class="box section" id="search">
+
+<h2>🔎 Search Donor</h2>
+
+<select id="searchBlood">
+
+<option value="">Select Blood Group</option>
+
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>O+</option>
+<option>O-</option>
+<option>AB+</option>
+<option>AB-</option>
+
+</select>
+
+<button class="submit" onclick="searchDonor()">Search</button>
+
+<table id="searchTable"></table>
+
+</div>
+
+
+<div class="box section" id="dashboard">
+
+<h2>📊 Registered Donors</h2>
+
+<table id="donorTable"></table>
+
+<h2>📋 Blood Requests</h2>
+
+<table id="requestTable"></table>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
